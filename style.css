@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Martel+Sans:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --a: 0;
+    --bgColor: black;
+    --textColor: white;
+    --headerColor: #2b2828;
+    --cardColor: #252525;
+    --playColor: #1fd164;
+    --playBarColor: #1d1b1b;
+    --searchColor: #1f1f1f;
+    --searchListColor: #2e2d2d;
+    --searchListHoverColor: #2a2a2a;
+    --footerAnchorsColor: grey;
+    --inputPlaceholderColor: #b3b3b3;
+    --searchListTextColor: #eee;
+    --searchListPlayColor: #1db954;
+    --searchTextColor: #ccc;
+    --scroll-thumb: #0078d4;
+    --scroll-track: #121212;
+}
+
+body.light {
+    --bgColor: #ffffff;
+    --textColor: #000000;
+    --headerColor: #f5e7e7;
+    --cardColor: #ffefef;
+    --playColor: #1db954;
+    --playBarColor: #e0e0e0;
+    --searchColor: #f3f3f3;
+    --searchListColor: #ffffff;
+    --searchListHoverColor: #f0f0f0;
+    --footerAnchorsColor: #333333;
+    --inputPlaceholderColor: #666666;
+    --searchListTextColor: #111111;
+    --searchListPlayColor: #1db954;
+    --searchTextColor: #222222;
+    --scroll-thumb: #0078d4;
+    /* Or any thumb color for light mode */
+    --scroll-track: #eee;
+    /* Or any light track color */
+}
+
+body.light .invertIcon {
+    filter: invert(1);
+}
+
+.themeIcon {
+    filter: invert(0);
+    /* Default for dark mode */
+    transition: filter 0.3s ease;
+}
+
+body.light .themeIcon {
+    filter: invert(1);
+}
+
+
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+
+/* for scroll bar  */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb);
+}
+
+
+.rounded {
+    border-radius: 7px;
+}
+
+.m1 {
+    margin: 5px;
+}
+
+.p1 {
+    padding: 10px;
+}
+
+
+.container {
+    display: flex;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+
+.right {
+    width: 72vw;
+    margin: 5px 0;
+    position: relative;
+}
+
+.logo {
+    display: none;
+}
+
+.logo img {
+    margin-top: 16px;
+    width: 50px;
+    height: auto;
+    /* filter: drop-shadow(0 0 12px #00ffcc); */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: none;
+    filter: invert(1);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 18px #00ffcc);
+}
+
+.nameContainer {
+    margin-top: -30px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+.name {
+    margin-left: 60px;
+}
+
+.tagline {
+    display: flex;
+    font-size: 1rem;
+    color: #aaa;
+    font-style: italic;
+    justify-content: space-evenly;
+}
+
+.songList {
+    /* padding: 5px 9px; */
+    overflow-y: auto;
+    max-height: 70vh;
+    margin: 0px;
+}
+
+.songList {
+    margin-top: 15px;
+    font-size: 0.75rem;
+}
+
+.info {
+    width: 344px;
+}
+
+.songList ul {
+    list-style: none;
+}
+
+.songList ul li {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 10px;
+    padding: 12px 0;
+    border: 1px solid var(--textColor);
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.songList ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.playNow span {
+    font-size: 0.75rem;
+    width: 64px;
+    padding: 7px;
+}
+
+
+.home ul li {
+    font-size: 0.90rem;
+    width: 15px;
+    gap: 7px;
+    display: flex;
+    list-style: none;
+    padding-top: 14px;
+}
+
+.library {
+    min-height: 92vh;
+    position: relative;
+}
+
+.library h2 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.footer {
+    display: flex;
+    font-size: 0.70rem;
+    gap: 11px;
+    position: absolute;
+    bottom: -35px;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer a {
+    color: var(--footerAnchorsColor);
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.close {
+    display: none;
+    cursor: pointer;
+}
+
+.header {
+    border-radius: 5px;
+    background: var(--bgColor);
+    border-bottom: 2px solid var(--footerAnchorsColor);
+    border-radius: 0px;
+    display: flex;
+}
+
+.buttons {
+    margin-left: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons button {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    border: none;
+    margin: 2px;
+    padding: 5px 10px;
+    border-radius: 100px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+
+
+.spotifyPlaylist {
+    padding: 16px;
+    font-size: 0.85rem;
+    font-size: 0.85rem;
+}
+
+.spotifyPlaylist>h1 {
+    margin-bottom: 15px;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding-bottom: 150px;
+}
+
+.card {
+    width: 235px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--cardColor);
+    position: relative;
+    transition: all .9s;
+}
+
+.card:hover {
+    background-color: var(--bgColor);
+    cursor: pointer;
+    --a: 1;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.play {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--playColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 190px;
+    right: 20px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+
+.playBar {
+    position: fixed;
+    bottom: 20px;
+    background-color: var(--playBarColor);
+    border-radius: 15px;
+    width: 67vw;
+    min-height: 60px;
+    z-index: 10;
+}
+
+
+.songButtons {
+    margin-right: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.songButtons img {
+    /* position: sticky; */
+    margin-top: 8px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.seekBar {
+    cursor: pointer;
+    height: 4px;
+    width: 97%;
+    border: 2.5px solid var(--textColor);
+    position: absolute;
+    bottom: 5px;
+    left: 17px;
+    border-radius: 50px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 13px;
+    background-color: var(--textColor);
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.2s;
+}
+
+.songInfo {
+    color: var(--textColor);
+    padding: 6px 12px;
+    width: 250px;
+}
+
+.songTime {
+    color: var(--textColor);
+    padding: 6px 0px;
+    width: 125px;
+}
+
+.vol {
+    margin-right: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.vol input {
+    cursor: pointer;
+}
+
+.vol img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mute img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.aboveBar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.searchContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.searchBar {
+    width: 70vw;
+    height: auto
+}
+
+.searchBar input::placeholder {
+    color: var(--inputPlaceholderColor);
+    text-align: center;
+}
+
+input {
+    color: var(--textColor);
+}
+
+#search {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    border: 1px solid var(--searchTextColor);
+    background-color: var(--searchColor);
+}
+
+.songSearchList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 12px;
+    padding: 0 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: var(--searchListColor);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.songSearchList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.songSearchList ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: var(--searchListTextColor);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.songSearchList ul li:hover {
+    background-color: var(--searchListHoverColor);
+}
+
+.songSearchList ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.songSearchList .info {
+    flex: 1;
+    margin: 0 12px;
+    color: var(--textColor);
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.songSearchList .playNow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--searchListPlayColor);
+}
+
+.logo2 {
+    height: 60px;
+    width: 25%;
+}
+
+
+.logo2 img {
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 50px;
+    height: auto;
+    /* filter: drop-shadow(0 0 12px #00ffcc); */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: none;
+    filter: invert(1);
+}
+
+.logo2 img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 18px #00ffcc);
+}
+
+.nameContainer2 {
+    margin-top: -30px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+.name2 {
+    margin-top: -54px;
+    margin-left: 60px;
+}
+
+
+.tagline2 {
+    margin-left: 110px;
+    font-size: 1rem;
+    color: #aaa;
+    font-style: italic;
+}
