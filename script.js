@@ -6,7 +6,7 @@ let currentSong = new Audio();
 let allSongs = [];
 
 // ================== CONFIG ==================
-const albumFolders = ["ncs", "trending", "lofi", "90s"]; 
+const albumFolders = ["ncs", "01_Trending Songs", "lofi", "02_Categorized", "90s", "Classical hits", "Essentials", "mashup", "punjabii"]; 
 // 👆 Add your album folder names here (they must exist in /songs/)
 
 // ================== UTILITIES ==================
