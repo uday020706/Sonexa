@@ -9,7 +9,7 @@ let allSongs = [];
 // function to fetch songs 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
+    let a = await fetch(`${folder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -95,7 +95,7 @@ const playMusic = (track, pause = false) => {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:3000/songs/`);
+    let a = await fetch(`songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -109,7 +109,7 @@ async function displayAlbums() {
             let folder = (e.href.split("/").slice(-2)[0]);
 
             // get the meta data of each folder 
-            let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+            let a = await fetch(`songs/${folder}/info.json`);
             let response = await a.json();
             console.log(response)
             cardContainer.innerHTML = cardContainer.innerHTML + ` <div data-folder="${folder}" class="card ">
@@ -228,7 +228,7 @@ async function displayAlbums() {
 
 // a fn to load all songs 
 async function loadAllSongs() {
-    let a = await fetch(`http://127.0.0.1:3000/songs/`);
+    let a = await fetch(`songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -240,7 +240,7 @@ async function loadAllSongs() {
             let folder = (e.href.split("/").slice(-2)[0]);
 
             // Fetch each folder's HTML
-            let res = await fetch(`http://127.0.0.1:3000/songs/${folder}/`);
+            let res = await fetch(`songs/${folder}/`);
             let html = await res.text();
             let d = document.createElement("div");
             d.innerHTML = html;
