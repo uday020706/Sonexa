@@ -2,158 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonexa - Music for everyone! </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonexa - Music for everyone!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <div class="close">
-                <img class=" invertIcon" src="img/close.svg" alt="close">
-            </div>
-            <div class="logo">
-                <img src="img/logo.png" alt="logo ">
-                <div class="nameContainer">
-                    <div class="name">
-                        <h2>Sonexa</h2>
-                    </div>
-                    <div class="tagline">
-                        <h3>Flow in sound</h3>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="library rounded m1 p1">
-                <h2>Browse Library</h2>
-                <div class="songList">
-                    <ul>
-
-                    </ul>
-                </div>
-                <div class="footer">
-                    <div>
-                        <a href="">
-                            <span>Legal</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="">
-                            <span>Privacy Center</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="">
-                            <span>Privacy Policy</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="">
-                            <span>Cookies</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="">
-                            <span>About Ads</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="">
-                            <span>Accessibility</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
+  <div class="container">
+    <div class="left">
+      <div class="close">
+        <img class="invertIcon" src="img/close.svg" alt="close">
+      </div>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo">
+        <div class="nameContainer">
+          <div class="name">
+            <h2>Sonexa</h2>
+          </div>
+          <div class="tagline">
+            <h3>Flow in sound</h3>
+          </div>
         </div>
-        <div class="right rounded ">
+      </div>
 
-            <div class="header">
-                <div class="nav">
-                    <img class="hamburger  invertIcon" src="img/hamburger.svg" alt="hamburger">
-                </div>
-
-
-
-                <div class="logo2">
-                    <img src="img/logo.png" alt="logo ">
-                    <div class="nameContainer2">
-                        <div class="name2">
-                            <h2>Sonexa</h2>
-                        </div>
-                        <div class="tagline2">
-                            <h3>Flow in sound</h3>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-                <div class="buttons">
-                    <button id="themeToggle" title="Toggle theme">Switch🌓</button>
-                </div>
-            </div>
-            <div class="searchContainer">
-                <div class="searchBar">
-                    <input type="text" id="search" placeholder="Search songs..." />
-                </div>
-                <div class="songSearchList">
-                    <ul>
-
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="spotifyPlaylist">
-                <h1>🎧 Explore All Albums</h1>
-                <div class="cardContainer">
-
-
-                    <div class="playBar">
-                        <div class="seekBar">
-                            <div class="circle">
-
-                            </div>
-
-                        </div>
-                        <div class="aboveBar">
-                            <div class="songInfo"></div>
-                            <div class="songButtons">
-                                <img class=" invertIcon" id="previous" src="img/prevSong.svg" alt="Previous song">
-                                <img class=" invertIcon" id="play" src="img/play.svg" alt="Play">
-                                <img class=" invertIcon" id="next" src="img/nextSong.svg" alt="Next song">
-                            </div>
-
-                            <div class="timeVol">
-                                <div class="songTime"></div>
-                                <div class="vol">
-                                    <img class=" invertIcon" src="img/vol.svg" alt="volume">
-                                    <div class="range">
-                                        <input type="range" name="volume" id="volume">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-            </div>
+      <div class="library rounded m1 p1">
+        <h2>Browse Library</h2>
+        <div class="songList">
+          <ul></ul>
         </div>
+        <div class="footer">
+          <div><a href=""><span>Legal</span></a></div>
+          <div><a href=""><span>Privacy Center</span></a></div>
+          <div><a href=""><span>Privacy Policy</span></a></div>
+          <div><a href=""><span>Cookies</span></a></div>
+          <div><a href=""><span>About Ads</span></a></div>
+          <div><a href=""><span>Accessibility</span></a></div>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="right rounded">
+      <div class="header">
+        <div class="nav">
+          <img class="hamburger invertIcon" src="img/hamburger.svg" alt="hamburger">
+        </div>
+
+        <div class="logo2">
+          <img src="img/logo.png" alt="logo">
+          <div class="nameContainer2">
+            <div class="name2">
+              <h2>Sonexa</h2>
+            </div>
+            <div class="tagline2">
+              <h3>Flow in sound</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="themeToggle" title="Toggle theme">Switch🌓</button>
+        </div>
+      </div>
+
+      <div class="searchContainer">
+        <div class="searchBar">
+          <input type="text" id="search" placeholder="Search songs..." />
+        </div>
+        <div class="songSearchList">
+          <ul></ul>
+        </div>
+      </div>
+
+      <div class="spotifyPlaylist">
+        <h1>🎧 Explore All Albums</h1>
+        <div class="cardContainer">
+          <!-- Albums will be injected here -->
+        </div>
+      </div>
+
+      <!-- ✅ Playbar moved OUTSIDE cardContainer -->
+      <div class="playBar">
+        <div class="seekBar">
+          <div class="circle"></div>
+        </div>
+        <div class="aboveBar">
+          <div class="songInfo"></div>
+          <div class="songButtons">
+            <img class="invertIcon" id="previous" src="img/prevSong.svg" alt="Previous song">
+            <img class="invertIcon" id="play" src="img/play.svg" alt="Play">
+            <img class="invertIcon" id="next" src="img/nextSong.svg" alt="Next song">
+          </div>
+          <div class="timeVol">
+            <div class="songTime"></div>
+            <div class="vol">
+              <img class="invertIcon" src="img/vol.svg" alt="volume">
+              <div class="range">
+                <input type="range" name="volume" id="volume">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ✅ End Playbar -->
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
