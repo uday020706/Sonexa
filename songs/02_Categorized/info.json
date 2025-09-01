@@ -1,6 +1,9 @@
 {
     "title" : "🎬 Bollywood Shuffle",
-    "description": "A vibrant mix of Bollywood hits 🎶 across moods, genres, and decades 🌟."
+    "description": "A vibrant mix of Bollywood hits 🎶 across moods, genres, and decades 🌟.",
+    "songs": [
+    "Tu Jo Mila Bajrangi Bhaijaan.mp3"
+  ]
 }
 
 

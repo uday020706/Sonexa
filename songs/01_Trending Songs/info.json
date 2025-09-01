@@ -1,4 +1,8 @@
 {
-    "title" : "🔥Non-Stop Trending",
-    "description": "Fresh, viral, and on repeat — the songs everyone’s vibing to right now🎶📈."
+  "title": "🔥Non-Stop Trending",
+  "description": "Fresh, viral, and on repeat — the songs everyone’s vibing to right now🎶📈.",
+  "songs": [
+    "Barbaad_Reprise_Female_Shilpa_Rao.mp3",
+    "Saiyaara_Reprise_Female_Faheem_Abdullah_Arslan_Nizami_Shreya_Ghoshal.mp3"
+  ]
 }
